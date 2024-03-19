@@ -1,5 +1,6 @@
 const defaultResult = 0;
 let currentResult = defaultResult;
+let logEntries = [];
 
 /*
 Fn to get the user input
@@ -21,8 +22,11 @@ Fn to add
 */
 function add(){
     const userInputValue = getUserInput();
-    const calcResult =  currentResult + userInputValue;
-    createAndWriteDesc("+",currentResult,userInputValue,calcResult);
+    const initialResult = currentResult;
+    currentResult += userInputValue;
+    createAndWriteDesc("+",initialResult,userInputValue,currentResult);
+    logEntries.push(userInputValue);
+    console.log(logEntries);
 }
 
 /*
@@ -30,8 +34,9 @@ Fn to subract
 */
 function subract(){
     const userInputValue = getUserInput();
-    const calcResult =  currentResult - userInputValue;
-    createAndWriteDesc("-",currentResult,userInputValue,calcResult);
+    const initialResult = currentResult;
+    currentResult -= userInputValue;
+    createAndWriteDesc("-",initialResult,userInputValue,currentResult);
 }
 
 /*
@@ -39,8 +44,9 @@ Fn to multiply
 */
 function multiply(){
     const userInputValue = getUserInput();
-    const calcResult =  currentResult * userInputValue;
-    createAndWriteDesc("*",currentResult,userInputValue,calcResult);
+    const initialResult = currentResult;
+    currentResult *= userInputValue;
+    createAndWriteDesc("*",initialResult,userInputValue,currentResult);
 }
 
 /*
@@ -48,8 +54,9 @@ Fn to divide
 */
 function divide(){
     const userInputValue = getUserInput();
-    const calcResult =  currentResult / userInputValue;
-    createAndWriteDesc("/",currentResult,userInputValue,calcResult);
+    const initialResult = currentResult;
+    currentResult /= userInputValue;
+    createAndWriteDesc("/",initialResult,userInputValue,currentResult);
 }
 
 /*
