@@ -1,6 +1,10 @@
 const defaultResult = 0;
 let currentResult = defaultResult;
-currentResult = (currentResult + 10) * 3 / 2 - 1;
-let calculationDescription = `( ${defaultResult} + 10) * 3 / 2 - 1`; // templateLiteral with backticks
 
-outputResult(currentResult,calculationDescription);
+
+function add(){
+    const result =  currentResult + parseInt(userInput.value);
+    outputResult(result,currentResult + " + "+ userInput.value);
+}
+
+addBtn.addEventListener('click',add);
