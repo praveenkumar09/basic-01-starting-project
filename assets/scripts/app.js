@@ -38,7 +38,7 @@ function add(){
     const initialResult = currentResult;
     currentResult += userInputValue;
     createAndWriteDesc("+",initialResult,userInputValue,currentResult);
-    writeToLog("+",initialResult,userInputValue,currentResult);
+    writeToLog("ADD",initialResult,userInputValue,currentResult);
 }
 
 /*
@@ -49,7 +49,7 @@ function subract(){
     const initialResult = currentResult;
     currentResult -= userInputValue;
     createAndWriteDesc("-",initialResult,userInputValue,currentResult);
-    writeToLog("-",initialResult,userInputValue,currentResult);
+    writeToLog("SUBRACT",initialResult,userInputValue,currentResult);
 }
 
 /*
@@ -60,7 +60,7 @@ function multiply(){
     const initialResult = currentResult;
     currentResult *= userInputValue;
     createAndWriteDesc("*",initialResult,userInputValue,currentResult);
-    writeToLog("*",initialResult,userInputValue,currentResult);
+    writeToLog("MULTIPLY",initialResult,userInputValue,currentResult);
 }
 
 /*
@@ -71,7 +71,7 @@ function divide(){
     const initialResult = currentResult;
     currentResult /= userInputValue;
     createAndWriteDesc("/",initialResult,userInputValue,currentResult);
-    writeToLog("/",initialResult,userInputValue,currentResult);
+    writeToLog("DIVIDE",initialResult,userInputValue,currentResult);
 }
 
 /*
