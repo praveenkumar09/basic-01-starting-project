@@ -18,6 +18,19 @@ function createAndWriteDesc(operator,resultbeforeCalc, calcNumber,result){
 }
 
 /*
+Fn to store operations log for the calc
+*/
+function writeToLog(operator,resultbeforeCalc,calcNumber,result){
+    const logEntry ={
+        operation : operator,
+        prevResult : resultbeforeCalc,
+        operand : calcNumber,
+        result : result
+    };
+    logEntries.push(logEntry);
+}
+
+/*
 Fn to add
 */
 function add(){
@@ -25,8 +38,7 @@ function add(){
     const initialResult = currentResult;
     currentResult += userInputValue;
     createAndWriteDesc("+",initialResult,userInputValue,currentResult);
-    logEntries.push(userInputValue);
-    console.log(logEntries);
+    writeToLog("+",initialResult,userInputValue,currentResult);
 }
 
 /*
@@ -37,6 +49,7 @@ function subract(){
     const initialResult = currentResult;
     currentResult -= userInputValue;
     createAndWriteDesc("-",initialResult,userInputValue,currentResult);
+    writeToLog("-",initialResult,userInputValue,currentResult);
 }
 
 /*
@@ -47,6 +60,7 @@ function multiply(){
     const initialResult = currentResult;
     currentResult *= userInputValue;
     createAndWriteDesc("*",initialResult,userInputValue,currentResult);
+    writeToLog("*",initialResult,userInputValue,currentResult);
 }
 
 /*
@@ -57,6 +71,7 @@ function divide(){
     const initialResult = currentResult;
     currentResult /= userInputValue;
     createAndWriteDesc("/",initialResult,userInputValue,currentResult);
+    writeToLog("/",initialResult,userInputValue,currentResult);
 }
 
 /*
